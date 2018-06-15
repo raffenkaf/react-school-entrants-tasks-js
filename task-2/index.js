@@ -8,18 +8,17 @@
  * @returns {Boolean}
  */
 function haveSameItems(arr1, arr2) {
-    let arr11 = arr1.slice();
     let arr22 = arr2.slice();
 
-    if (arr11.length !== arr22.length) {
+    if (arr1.length !== arr22.length) {
         return false;
     }
 
     arr22.sort();
 
     let iterator;
-    for(iterator = 0; iterator < arr11.length; iterator++){
-        if (arr11[iterator] !== arr22[iterator]) return false;
+    for(iterator = 0; iterator < arr1.length; iterator++){
+        if (arr1[iterator] !== arr22[iterator]) return false;
     }
 
     return true;
